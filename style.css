@@ -512,7 +512,7 @@ button,input{font:inherit}
 }
 .event-card.ivory {
     background-color: #FFFFF0 !important;
-    border: 2px solid #800020 !important;
+    border: 1px solid #800020 !important;
     border-radius: 16px !important;
     box-sizing: border-box;
 }
