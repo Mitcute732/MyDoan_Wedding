@@ -441,3 +441,76 @@ button,input{font:inherit}
     font-size: 35px;
   }
 }
+
+/* SUA LOI THIEP CUOI - TIEP TUC V2.8.4 */
+
+/* 1. Loi moi: thu nho chu de tranh roi rieng chu "dinh" */
+.invite-heading h3 {
+  font-size: clamp(13px, 2.6vw, 20px) !important;
+  line-height: 1.35;
+  letter-spacing: -0.25px;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* 2. "Hen gap ban tai day": giam khoang 45% */
+.map-section .section-title h3 {
+  font-size: 0.55em !important;
+  line-height: 1.35;
+}
+
+/* 3. Khung hero: vien do dam, bo kin noi dung */
+.hero {
+  position: relative;
+}
+
+.hero-frame {
+  inset: 10px !important;
+  border: 4px solid #9c1118 !important;
+  border-radius: 24px !important;
+  box-sizing: border-box;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Dam cac goc trang tri cua khung */
+.hero-frame::before,
+.hero-frame::after {
+  border-color: #9c1118 !important;
+  border-width: 3px !important;
+}
+
+/* Noi dung nam phia tren vien khung */
+.hero-title-block,
+.couple-frame,
+.hero-copy,
+.hero-side-blessing,
+.hero-phoenix,
+.hero-dragon {
+  position: relative;
+  z-index: 2;
+}
+
+/* Khong thay doi co chu dong thong bao ngay vui */
+.hero-copy {
+  /* Giu nguyen co chu dang dung */
+}
+
+/* Dieu chinh tren dien thoai */
+@media (max-width: 520px) {
+  .invite-heading h3 {
+    font-size: 13px !important;
+    white-space: nowrap;
+    letter-spacing: -0.4px;
+  }
+
+  .map-section .section-title h3 {
+    font-size: 0.55em !important;
+  }
+
+  .hero-frame {
+    inset: 8px !important;
+    border-width: 3px !important;
+    border-radius: 20px !important;
+  }
+}
