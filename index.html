@@ -146,5 +146,50 @@
 </main>
 
 <script src="script.js"></script>
+
+<script>
+document.getElementById("rsvpForm").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const name = document.getElementById("guestName").value.trim();
+  const choice = form.querySelector('input[name="attendance"]:checked');
+  const toast = document.getElementById("toast");
+  const button = form.querySelector('button[type="submit"]');
+
+  if (!name || !choice) {
+    toast.textContent = "Bạn vui lòng nhập tên và chọn xác nhận tham dự nhé!";
+    return;
+  }
+
+  const attendance = choice.value === "Có"
+    ? "Có tham dự"
+    : "Không tham dự";
+
+  button.disabled = true;
+  toast.textContent = "Đang gửi xác nhận...";
+
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycby9x_OavSnf1RaEbKsG2mKE-bCkhcfAr7-ouKepbJbhEVmb2WuLvv2MxaJzeklU0zTp/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify({
+        name: name,
+        attendance: attendance
+      })
+    });
+
+    toast.textContent = "Cảm ơn bạn! Đã gửi xác nhận tham dự ❤️";
+    form.reset();
+  } catch (error) {
+    toast.textContent = "Chưa gửi được. Bạn vui lòng thử lại nhé!";
+  } finally {
+    button.disabled = false;
+  }
+});
+</script>
 </body>
 </html>
