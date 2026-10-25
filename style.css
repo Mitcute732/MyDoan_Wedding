@@ -510,3 +510,9 @@ button,input{font:inherit}
 .invitation {
   transition: opacity 1.2s ease-in-out !important;
 }
+.event-card.ivory {
+    background-color: #FFFFF0 !important;
+    border: 2px solid #800020 !important;
+    border-radius: 16px !important;
+    box-sizing: border-box;
+}
