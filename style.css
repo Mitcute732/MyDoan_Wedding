@@ -466,10 +466,10 @@ button,input{font:inherit}
 }
 
 .calendar-grid.dates > span.heart-outline {
-  z-index: 2;
+  z-index: 1.5;
   isolation: isolate;
   color: #9c1118 !important;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .calendar-grid.dates > span.heart-outline::before {
