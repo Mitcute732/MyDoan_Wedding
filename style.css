@@ -23,7 +23,7 @@ button,input{font:inherit}
 .qm-card:after{content:"";position:absolute;inset:0;border:1px solid rgba(123,16,23,.12);pointer-events:none}
 .qm-emblem{
   position:absolute;z-index:5;left:50%;top:6px;transform:translateX(-50%);
-  width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
+  width:50px;height:50px;border-radius:50%;display:grid;place-items:center;
   background:#8b0e14;color:#ead1c6;font-family:"Songti SC","Noto Serif CJK SC",serif;
   font-size:28px;box-shadow:0 8px 22px rgba(91,6,11,.22)
 }
