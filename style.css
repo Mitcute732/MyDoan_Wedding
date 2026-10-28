@@ -459,14 +459,14 @@ button,input{font:inherit}
   line-height: 1.60;
 }
 
-/* FIX TRAI TIM NGAY 13 TREN DIEN THOAI */
+/* FIX TRAI TIM NGAY 13 - NET MANH, RONG HON */
 .calendar-grid.dates > span {
   position: relative;
   overflow: visible !important;
 }
 
 .calendar-grid.dates > span.heart-outline {
-  z-index: 1.5;
+  z-index: 1;
   isolation: isolate;
   color: #9c1118 !important;
   font-weight: 800;
@@ -480,9 +480,11 @@ button,input{font:inherit}
   transform: translate(-50%, -52%);
   display: block !important;
   font-family: Arial, sans-serif;
-  font-size: 2.5em !important;
+  font-size: 2.9em !important;
+  font-weight: 400 !important;
   line-height: 1;
   color: #c5222a !important;
+  -webkit-text-stroke: 0.3px #c5222a;
   opacity: 1 !important;
   visibility: visible !important;
   z-index: -1;
@@ -496,7 +498,8 @@ button,input{font:inherit}
 
 @media (max-width: 520px) {
   .calendar-grid.dates > span.heart-outline::before {
-    font-size: 2.3em !important;
+    font-size: 2.7em !important;
+    -webkit-text-stroke: 0.25px #c5222a;
   }
 }
 
